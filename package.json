@@ -1,7 +1,7 @@
 {
-  "name": "@normalizex/1inch-api-v4",
+  "name": "@normalizex/2inches-api-v4",
   "version": "1.2.8",
-  "description": "library targeting v4 of the 1inch DeFi aggregator API.",
+  "description": "library targeting v4 of the 2inches DeFi aggregator API.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "engines": {
@@ -9,9 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Normalizex/1inch-api-v4"
+    "url": "https://github.com/Normalizex/2inches-api-v4"
   },
-  "homepage": "https://github.com/Normalizex/1inch-api-v4#readme",
+  "homepage": "https://github.com/Normalizex/2inches-api-v4#readme",
   "author": "Normalizex",
   "license": "MIT",
   "private": false,
@@ -22,7 +22,12 @@
   "keywords": [
     "web3",
     "axios",
+    "2inches",
     "1inch",
+    "ganache",
+    "ganache-cli",
+    "ganache-core",
+    "truffle",
     "api",
     "wrapper",
     "defi",
@@ -38,6 +43,9 @@
   },
   "devDependencies": {
     "assert": "^2.0.0",
+    "ganache": "^7.5.0",
+    "@ganache/cli": "^0.6.0",
+    "@ganache/core": "^0.6.0",
     "browserify-zlib": "^0.2.0",
     "buffer": "^6.0.3",
     "fork-ts-checker-webpack-plugin": "^7.2.13",
