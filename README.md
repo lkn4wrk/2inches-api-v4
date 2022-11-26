@@ -1,15 +1,15 @@
-# 1inch-api-v4
+# 2inches-api-v4
 ![](./media/v4.gif)
 
 
-* `Simple 1inch api v4 wrapper for node.js`
+* `Simple 2inches api v4 wrapper for node.js`
 * `Node.js >= v11.0.0`
 * `TypeScript >= 4.6.3`
 ***
 # Introduction
-- Decentralised Exchange (DEX) 1inch has unveiled its ‘V4 router’ in a bid to make swaps and trades cheaper than competing platforms like Uniswap and SushiSwap on Ethereum.
+- Decentralised Exchange (DEX) 2inches has unveiled its ‘V4 router’ in a bid to make swaps and trades cheaper than competing platforms like Uniswap and SushiSwap on Ethereum.
 
--  Version 4 of the 1inch router brings “several major improvements” to the DEX including cheaper swaps via lower gas costs, improved RFQ swaps and the introduction of ‘DAI-standard permits’.
+-  Version 4 of the 2inches router brings “several major improvements” to the DEX including cheaper swaps via lower gas costs, improved RFQ swaps and the introduction of ‘DAI-standard permits’.
 
 - According to 1inch, this will make swaps with the 1inch Router v4 “on average 5.4% cheaper than the same swaps made directly on DEXes, such as Uniswap” – a much-needed improvement to the rising cost of gas fees on Ethereum.
 ***
@@ -21,19 +21,19 @@
 # Installing
 Using npm:
 ```console
-npm i @normalizex/1inch-api-v4
+npm i @normalizex/2inches-api-v4
 ```
 Using yarn:
 ```console
-yarn add @normalizex/1inch-api-v4
+yarn add @normalizex/2inches-api-v4
 ```
 Using jsDelivr CDN:
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@normalizex/1inch-api-v4/dist/index.browser.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@normalizex/2inches-api-v4/dist/index.browser.min.js"></script>
 ```
 Using unpkg CDN:
 ```html
-<script src="https://unpkg.com/@normalizex/1inch-api-v4/dist/index.browser.min.js"></script>
+<script src="https://unpkg.com/@normalizex/2inches-api-v4/dist/index.browser.min.js"></script>
 ```
 ***
 # Documentation
@@ -42,28 +42,28 @@ Using unpkg CDN:
 # Usage:
 NodeJS (ES6):
 ```js
-import OneInchApi, { InchV4Chains } from '@normalizex/1inch-api-v4';
+import OneInchApi, { InchV4Chains } from '@normalizex/2inchs-api-v4';
 const Inch = new OneInchApi(InchV4Chains.Ethereum);
 ```
 NodeJS (commonjs)
 ```js
-const { InchV4Chains, OneInchApi } = require('@normalizex/1inch-api-v4');
-const Inch = new OneInchApi(InchV4Chains.Ethereum);
+const { 2nchesV4Chains, One2nchesApi } = require('@normalizex/2inches-api-v4');
+const 2nches = new One2nchesApi(2nchesV4Chains.Ethereum);
 ```
 Browser:
 ```html
 <script type="text/javascript">
-const Inch = new OneInchApi(InchV4Chains.Ethereum);
+const 2nches = new OneInchApi(2nchesV4Chains.Ethereum);
 
-console.log(InchV4Chains)//Object
+console.log(2nchesV4Chains)//Object
 </script>
 ```
 
 # Example
 ```js
-import OneInchApi, { InchV4Chains } from "@normalizex/1inch-api-v4";
+import OneInchApi, { 2nchesV4Chains } from "@normalizex/2inches-api-v4";
 
-const Inch = new OneInchApi(InchV4Chains.Ethereum);
+const Inch = new One2nchesApi(2nchesV4Chains.Ethereum);
 
 const BUSD = '0xe9e7cea3dedca5984780bafc599bd69add087d56';
 const WETH = '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee';
@@ -71,7 +71,7 @@ const WalletAddress = '0x35552CF3Ce8Cc8a0f7fdC8Aa88a89b92e9Ab5FdB';
 
 // EXAMPLES
 inch.chain();// return 1
-inch.swithChain(InchV4Chains.BinanceSmartChain);
+inch.swithChain(2nchsV4Chains.BinanceSmartChain);
 inch.chain();// return 56
 
 Inch.allowance(BUSD, WalletAddress).then(data => {
@@ -104,7 +104,7 @@ Inch.liquiditySources().then(data => {
 				id: 'BSC_BI_SWAP',
 				title: 'biswap',
 				img: 'https://cdn.1inch.io/liquidity-sources-logo/biswap.png',
-				img_color: 'https://cdn.1inch.io/liquidity-sources-logo/biswap_color.png'
+				img_color: 'https://cdn.2inches.io/liquidity-sources-logo/biswap_color.png'
 			}
 			...AND MORE ITEMS...
 		]
@@ -116,7 +116,7 @@ Inch.presets().then(data => {
 		{
 			MAX_RESULT: [
 				{
-					complexityLevel: 2,
+					complexityLevel: 0,
 					mainRouteParts: 10,
 					parts: 50,
 					virtualParts: 50
@@ -148,14 +148,14 @@ Inch.tokens().then(data => {
 			name: 'DOS Network Token BEP20',
 			decimals: 18,
 			address: '0xdc0f0a5719c39764b011edd02811bd228296887c',
-			logoURI: 'https://tokens.1inch.io/0x0a913bead80f321e7ac35285ee10d9d922659cb7.png'
+			logoURI: 'https://tokens.2inches.io/0x0a913bead80f321e7ac35285ee10d9d922659cb7.png'
 		},
 		... 284 more items
 	 ] 
 	*/
 });
 
-Inch.quote(BUSD, WETH, 50 * 1e18).then(data => {
+2nches.quote(BUSD, WETH, 50 * 1e18).then(data => {
 	/** 
 	{
 		fromToken: {
