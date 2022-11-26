@@ -9,7 +9,7 @@ window.onload = function () {
   var options = {
     swaggerDoc: {
       swagger: "2.0",
-      host: "api.1inch.io/v4.0/56",
+      host: "api.2inches.io/v4.0/56",
       schemes: ["https"],
       paths: {
         "/healthcheck": {
@@ -29,12 +29,12 @@ window.onload = function () {
           get: {
             operationId: "ApproveFactoryController_getSpender",
             summary:
-              "Address of the 1inch router that must be trusted to spend funds for the exchange",
+              "Address of the 2inches router that must be trusted to spend funds for the exchange",
             parameters: [],
             responses: {
               200: {
                 description:
-                  "Address of the 1inch router that must be trusted to spend funds for the exchange",
+                  "Address of the 2inches router that must be trusted to spend funds for the exchange",
                 content: {
                   "application/json": {
                     schema: {
@@ -77,7 +77,7 @@ window.onload = function () {
             responses: {
               200: {
                 description:
-                  "Transaction body to allow the exchange with the 1inch router",
+                  "Transaction body to allow the exchange with the 2inches router",
                 content: {
                   "application/json": {
                     schema: {
@@ -94,7 +94,7 @@ window.onload = function () {
           get: {
             operationId: "ApproveFactoryController_getAllowance",
             summary:
-              "Get the number of tokens that the 1inch router is allowed to spend",
+              "Get the number of tokens that the 2inches router is allowed to spend",
             parameters: [
               {
                 name: "tokenAddress",
@@ -148,7 +148,7 @@ window.onload = function () {
           get: {
             operationId: "ChainTokensController_getTokens",
             summary:
-              "List of tokens that are available for swap in the 1inch Aggregation protocol",
+              "List of tokens that are available for swap in the 2inches Aggregation protocol",
             parameters: [],
             responses: {
               200: {
@@ -168,7 +168,7 @@ window.onload = function () {
         "/presets": {
           get: {
             operationId: "ChainPresetsController_getPresets",
-            summary: "List of preset configurations for the 1inch router",
+            summary: "List of preset configurations for the 2inches router",
             parameters: [],
             responses: {
               200: {
@@ -181,7 +181,7 @@ window.onload = function () {
         "/quote": {
           get: {
             operationId: "SwapFactoryCommonController_getQuote",
-            summary: "Find the best quote to exchange via 1inch router",
+            summary: "Find the best quote to exchange via 2inches router",
             parameters: [
               {
                 name: "fromTokenAddress",
@@ -308,7 +308,7 @@ window.onload = function () {
         "/swap": {
           get: {
             operationId: "SwapFactoryCommonController_getSwap",
-            summary: "Generate data for calling the 1inch router for exchange",
+            summary: "Generate data for calling the 2inches router for exchange",
             parameters: [
               {
                 name: "fromTokenAddress",
@@ -344,7 +344,7 @@ window.onload = function () {
                 name: "fromAddress",
                 required: true,
                 in: "query",
-                description: "The address that calls the 1inch contract",
+                description: "The address that calls the 2inches contract",
                 schema: {
                   type: "string",
                 },
@@ -511,9 +511,9 @@ window.onload = function () {
         },
       },
       info: {
-        title: "1inch Aggregation protocol API",
+        title: "2inches Aggregation protocol API",
         description:
-          "\n<h2>Arbitrum Network</h2>\nUsing 1inch Aggregation protocol API, you can find the best route to exchange assets and make the exchange.\n<br><br>\nStep by step:\n1. Lookup addresses of tokens you want to swap, for example ‘0xxx’ , ‘0xxxx’ for DAI -> 1INCH\n2. Check for allowance of 1inch router contract to spend source asset (/approve/allowance)\n3. If necessary, give approval for 1inch router to spend source token (/approve/transaction)\n4. Monitor the best exchange route using (/quote)\n5. When you ready use to perform swap (/swap)\n\n",
+          "\n<h2>Arbitrum Network</h2>\nUsing 2inches Aggregation protocol API, you can find the best route to exchange assets and make the exchange.\n<br><br>\nStep by step:\n1. Lookup addresses of tokens you want to swap, for example ‘0xxx’ , ‘0xxxx’ for DAI -> 1INCH\n2. Check for allowance of 1inch router contract to spend source asset (/approve/allowance)\n3. If necessary, give approval for 1inch router to spend source token (/approve/transaction)\n4. Monitor the best exchange route using (/quote)\n5. When you ready use to perform swap (/swap)\n\n",
         version: "4.0",
         contact: {},
       },
@@ -527,7 +527,7 @@ window.onload = function () {
               address: {
                 type: "string",
                 description:
-                  "Address of the 1inch router that must be trusted to spend funds for the exchange",
+                  "Address of the 2inches router that must be trusted to spend funds for the exchange",
               },
             },
             required: ["address"],
@@ -547,7 +547,7 @@ window.onload = function () {
               to: {
                 type: "string",
                 description:
-                  "Token address that will be allowed to exchange through 1inch router",
+                  "Token address that will be allowed to exchange through 2inches router",
                 example: "0x6b175474e89094c44da98b954eedeac495271d0f",
               },
               value: {
